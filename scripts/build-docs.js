@@ -12,3 +12,8 @@ files.map(name =>
 
 // generate doc for readme
 sh.cp('README.md', 'docs/README.md')
+
+// generate swagger document
+sh.exec('swagger-jsdoc -d swaggerDef.js')
+// generate markdown from swagger
+sh.exec('swagger-markdown -i swagger.json -o docs/api.md')

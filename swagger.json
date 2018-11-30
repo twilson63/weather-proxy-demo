@@ -1,0 +1,67 @@
+{
+  "info": {
+    "title": "Weather Proxy",
+    "version": "1.0.0",
+    "description": "Request the current weather for a city"
+  },
+  "host": "weather.twilson63.xyz",
+  "basePath": "/",
+  "apis": [
+    "./app.js",
+    "./definitions.yaml"
+  ],
+  "swagger": "2.0",
+  "paths": {
+    "/": {
+      "get": {
+        "description": "Gets current weather forecast for a given city",
+        "parameters": [
+          {
+            "name": "q",
+            "type": "query",
+            "description": "city to find forecast"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "schema": {
+              "$ref": "#/definitions/WeatherResponse"
+            }
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "WeatherResponse": {
+      "type": "object",
+      "description": "Weather Object Response",
+      "properties": {
+        "location": {
+          "description": "City of weather report",
+          "type": "string"
+        },
+        "temp": {
+          "description": "Temperture in fahrenheit",
+          "type": "number"
+        },
+        "forecast": {
+          "description": "short description of current forecast",
+          "type": "string"
+        },
+        "icon": {
+          "description": "url to weather forecast icon",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "responses": {},
+  "parameters": {},
+  "securityDefinitions": {},
+  "tags": []
+}
