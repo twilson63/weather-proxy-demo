@@ -2,6 +2,24 @@ const express = require('express')
 const app = express()
 const findWeather = require('./lib/weather').find
 
+/**
+ * @swagger
+ * /:
+ *   get:
+ *     description: Get a weather forcast for a city
+ *     parameters:
+ *     - name: q
+ *       type: string
+ *       in: query
+ *       description: city name
+ *     responses:
+ *       '200':
+ *         description: Successful Response
+ *         schema:
+ *          $ref: '#/definitions/WeatherResponse
+ *       '404':
+ *         description: city not found
+ */
 app.get('/', (req, res) => {
   if (req.query.q) {
     return findWeather(req.query.q)

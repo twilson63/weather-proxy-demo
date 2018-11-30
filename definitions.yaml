@@ -1,0 +1,17 @@
+definitions:
+  WeatherResponse:
+    type: object
+    description: Weather Object Response
+    properties:
+      location:
+        description: City of weather report
+        type: string
+      temp:
+        description: Temperture in fahrenheit
+        type: number
+      forecast:
+        description: short description of current forecast
+        type: string
+      icon:
+        description: url to weather forecast icon
+        type: string

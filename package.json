@@ -19,6 +19,8 @@
   "devDependencies": {
     "eslint": "^5.9.0",
     "jsdoc-to-markdown": "^4.0.1",
-    "shelljs": "^0.8.3"
+    "shelljs": "^0.8.3",
+    "swagger-jsdoc": "^3.2.6",
+    "swagger-markdown": "^1.1.5"
   }
 }
