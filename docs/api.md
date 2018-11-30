@@ -14,7 +14,7 @@ Request the current weather for a city
 
 | Name | Located in | Description | Required | Schema |
 | ---- | ---------- | ----------- | -------- | ---- |
-| q |  | city to find forecast | No | query |
+| q | query | city to find forecast | No |  |
 
 **Responses**
 

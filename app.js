@@ -9,7 +9,7 @@ const findWeather = require('./lib/weather').find
  *     description: Gets current weather forecast for a given city
  *     parameters:
  *     - name: q
- *       type: query
+ *       in: query
  *       description: city to find forecast
  *     responses:
  *       '200':
