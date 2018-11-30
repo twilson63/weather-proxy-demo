@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build-docs": "node scripts/build.js"
+    "build-docs": "node scripts/build.js",
+    "docs": "cd website && npm start",
+    "deploy-docs": "npm run build-docs && cd website && npm run build &&  cd build/weather && now --static && now alias weather-docs.twilson63.xyz"
   },
   "keywords": [],
   "author": "",
